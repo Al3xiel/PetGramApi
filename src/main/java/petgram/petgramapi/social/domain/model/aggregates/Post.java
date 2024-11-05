@@ -15,7 +15,7 @@ public class Post extends AuditableModel {
     private String content;
     private String imageUrl;
     private User user;
-    private List<Tag> tag;
+    private Tag tag;
     private List<Comment> comments;
 
     public Post(){}
