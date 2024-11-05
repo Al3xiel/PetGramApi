@@ -18,6 +18,6 @@ public class UserQueryServiceImpl implements UserQueryService {
     }
     @Override
     public Optional<User> handle(GetUserByIdQuery query) {
-        return Optional.empty();
+        return this.userRepository.findById(query.id());
     }
 }

@@ -21,11 +21,11 @@ public class TagQueryServiceImpl implements TagQueryService {
 
     @Override
     public List<Tag> handle(GetAllTagsQuery query) {
-        return List.of();
+        return this.tagRepository.findAll();
     }
 
     @Override
     public Optional<Tag> handle(GetTagByIdQuery query) {
-        return Optional.empty();
+        return this.tagRepository.findById(query.id());
     }
 }
